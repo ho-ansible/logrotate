@@ -13,8 +13,10 @@
   tags:
   - config
   template:
-    src: logrotate.conf.j2
-    dest: /etc/logrotate.conf
+    src: "{{ item }}.j2"
+    dest: "/etc/{{ item }}"
+  with_items:
+    - logrotate.conf
 
 - name: Logrotate | log archive dir
   tags:
