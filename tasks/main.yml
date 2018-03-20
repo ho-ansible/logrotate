@@ -16,6 +16,14 @@
     src: logrotate.conf.j2
     dest: /etc/logrotate.conf
 
+- name: Logrotate | clear pkg config
+  tags:
+    - config
+  file:
+    path: "/etc/logrotate.d/{{ item }}"
+    state: absent
+  with_items: "{{ logrotate_clear }}"
+
 - name: Logrotate | log archive dir
   tags:
   - dir
