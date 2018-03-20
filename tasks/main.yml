@@ -23,13 +23,3 @@
     path: "/etc/logrotate.d/{{ item }}"
     state: absent
   with_items: "{{ logrotate_clear }}"
-
-- name: Logrotate | log archive dir
-  tags:
-  - dir
-  file:
-    path: /var/log/old
-    state: directory
-    owner: root
-    group: adm
-    mode: 0770
