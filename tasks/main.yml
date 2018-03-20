@@ -11,10 +11,10 @@
 
 - name: Logrotate | config
   tags:
-  - config
-  template:
-    src: logrotate.conf.j2
-    dest: /etc/logrotate.conf
+    - config
+  copy:
+    src: logrotate.conf
+    dest: /etc/
 
 - name: Logrotate | clear pkg config
   tags:
