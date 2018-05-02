@@ -4,10 +4,7 @@
   tags:
   - package
   package:
-    name: "{{ item }}"
-    state: present
-  with_items:
-  - logrotate
+    name: logrotate
 
 - name: Logrotate | config
   tags:
