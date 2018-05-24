@@ -19,4 +19,4 @@
   file:
     path: "/etc/logrotate.d/{{ item }}"
     state: absent
-  with_items: "{{ logrotate_clear }}"
+  loop: "{{ q('list', logrotate_clear) }}"
