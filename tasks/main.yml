@@ -8,14 +8,14 @@
 
 - name: Logrotate | config
   tags:
-    - config
+  - config
   copy:
     src: logrotate.conf
     dest: /etc/
 
 - name: Logrotate | clear pkg config
   tags:
-    - config
+  - config
   file:
     path: "/etc/logrotate.d/{{ item }}"
     state: absent
