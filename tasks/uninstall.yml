@@ -1,0 +1,11 @@
+---
+
+- name: logrotate | uninstall pkg
+  package:
+    name: logrotate
+    state: absent
+
+- name: logrotate | remove config
+  file:
+    path: "/etc/logrotate.conf"
+    state: absent

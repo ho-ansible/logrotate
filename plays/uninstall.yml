@@ -1,0 +1,12 @@
+#! /usr/bin/env ansible-playbook
+# Uninstall logrotate
+# Replace 'all' with your own inventory group
+---
+- name: logrotate | uninstall
+  hosts: all
+  tasks:
+  - include_role:
+      name: logrotate
+      tasks_from: uninstall.yml
+    tags:
+    - logrotate

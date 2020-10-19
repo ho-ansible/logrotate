@@ -9,7 +9,7 @@ Only tested on Debian stable, for now.
 
 ## Playbooks
 + `main.yml`: apply role
-+ `uninstall.yml`: remove. Run before removing config from inventory.
++ `uninstall.yml`: remove package and config (leaves `/etc/logrotate.d/`)
 
 ## Dependencies
 None.

@@ -1,10 +1,12 @@
 #! /usr/bin/env ansible-playbook
-# Configure template role
+# Configure logrotate role
 # Replace 'all' with your own inventory group
 ---
-- name: template | template role
+- name: logrotate | roll log files
   hosts: all
   roles:
-  - role: template
+  - role: logrotate
     tags:
-    - template
+    - log
+    - syslog
+    - logrotate
