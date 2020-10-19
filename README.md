@@ -1,11 +1,11 @@
-# Ansible role: template
-Brief description of role.
+# Ansible role: logrotate
+Compress and archive old system logs.
 
 ## Requirements
 Only tested on Debian stable, for now.
 
 ## Role Variables
-+ `variable`: description
++ `logrotate_clear`: list of package-supplied logrotate config to delete
 
 ## Playbooks
 + `main.yml`: apply role
